@@ -6,7 +6,7 @@ using namespace std;
 
 void change(int &a);
 void pass_by_ref(vector<string> &v);
-void print_vector(vector<string> &v);
+void print_vector(const vector<string> &v);
 
 int main(){
     int a{50};
@@ -34,7 +34,7 @@ void pass_by_ref(vector<string> &v){
     v.clear();
 }
 
-void print_vector(vector<string> &v){
+void print_vector(const vector<string> &v){
     for(auto i: v){
         cout<<i<<" ";
     }
