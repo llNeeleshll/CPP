@@ -66,7 +66,7 @@ public:
 };
 
 // Function prototypes
-auto make(){
+std::unique_ptr<std::vector<std::shared_ptr<Test>>> make(){
     return make_unique<vector<shared_ptr<Test>>>();
 }
 
