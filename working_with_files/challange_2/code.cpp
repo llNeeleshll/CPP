@@ -6,7 +6,7 @@
 using namespace std;
 
 class Student{
-    
+
     string name{};
     int correct {};
 
@@ -64,8 +64,14 @@ int main(){
             }
         }
 
+        double average {};
+
         for(Student student : students){
             cout<<student.get_name()<<" socred : "<<student.get_marks()<<" marks."<<endl;
+            average += student.get_marks();
         }
+
+        average = static_cast<double>(average) / students.size();
+        cout<<"Average Marks : "<<average;
     }
 }
