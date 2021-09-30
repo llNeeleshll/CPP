@@ -40,9 +40,7 @@ void read_file_line(string file_name, list<string> &all_file_content_lines){
     if(file_read){
         while (!file_read.eof()){
             getline(file_read,content);
-            if(content != ""){
-                all_file_content_lines.push_back(content);
-            }
+            all_file_content_lines.push_back(content);
         }
     }
 
@@ -76,11 +74,13 @@ void create_map_line_numbers(list<string> const &file_content, list<string> cons
 
         for(auto sub_item : file_content_by_line){
 
+            count++;
+
             size_t index = sub_item.find(item);
 
             if(index != string::npos){
                 //Found
-                line_numbers.insert(index);
+                line_numbers.insert(count);
             }
         }
 
